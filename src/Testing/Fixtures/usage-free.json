@@ -1,0 +1,22 @@
+{
+    "tier": "free",
+    "credits_remaining": null,
+    "estimated_requests_remaining": null,
+    "requests_this_month": 3,
+    "plates_detected_this_month": 2,
+    "cost_this_month": 0.0,
+    "daily_usage": [
+        {
+            "date": "2026-02-12",
+            "requests": 2,
+            "plates": 1,
+            "cost": 0.0
+        },
+        {
+            "date": "2026-02-13",
+            "requests": 1,
+            "plates": 1,
+            "cost": 0.0
+        }
+    ]
+}

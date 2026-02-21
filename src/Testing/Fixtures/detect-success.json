@@ -1,0 +1,38 @@
+{
+    "success": true,
+    "plates_found": 1,
+    "plates": [
+        {
+            "plate_id": 0,
+            "position": {
+                "x1": 120,
+                "y1": 340,
+                "x2": 280,
+                "y2": 390
+            },
+            "confidence": 0.952,
+            "text": {
+                "plate_code_en": "AZ",
+                "plate_code_ar": "\u0623\u0645",
+                "plate_number_en": "53",
+                "plate_number_ar": "\u0665\u0663",
+                "characters": [
+                    {"class": "A", "confidence": 0.96},
+                    {"class": "Z", "confidence": 0.94},
+                    {"class": "5", "confidence": 0.92},
+                    {"class": "3", "confidence": 0.90}
+                ]
+            },
+            "attributes": {
+                "country": "uae",
+                "emirate": "dubai",
+                "color": "white",
+                "type": "private",
+                "size": "long"
+            }
+        }
+    ],
+    "response_time_ms": 390,
+    "cost": 0.02,
+    "timestamp": "2026-02-13T10:30:00.000000"
+}
