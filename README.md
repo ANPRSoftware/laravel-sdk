@@ -1,6 +1,7 @@
 # ANPR Laravel SDK
 
-**Automatic Number Plate Recognition for Laravel** — Detect, read, and classify GCC license plates from any image in seconds.
+**Automatic Number Plate Recognition for Laravel** - Detect, read, and classify license plates from any image in seconds. Built for all GCC countries: UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman. 
+Detects the plate number, plate code, country, emirate (in UAE), type (private, commercial, export etc.), plate size, plate color, plate text color. 
 
 ```php
 $result = Anpr::detect($image);
@@ -45,11 +46,11 @@ Per-character classification on cropped plates:
 
 ## What It Does
 
-- **Plate Detection** — Locate and extract license plates from full vehicle images
-- **Dual-Language OCR** — Read plate code and number in both English and Arabic with per-character confidence scores
-- **Classification** — Identify country, emirate, plate color, type (private, taxi, diplomatic, police...), and size
-- **Multi-Plate Support** — Detect and read multiple plates in a single image
-- **Bounding Box Coordinates** — Get exact plate positions for image annotation or cropping
+- **Plate Detection** - Locate and extract license plates from full vehicle images
+- **Dual-Language OCR** - Read plate code and number in both English and Arabic with per-character confidence scores
+- **Classification** - Identify country, emirate, plate color, type (private, taxi, diplomatic, police...), and size
+- **Multi-Plate Support** - Detect and read multiple plates in a single image
+- **Bounding Box Coordinates** - Get exact plate positions for image annotation or cropping
 
 ## Requirements
 
@@ -146,7 +147,7 @@ echo $health->models['ocr'];   // true
 
 ## Custom Parameters
 
-Attach metadata to any detection request. Parameters are forwarded to your webhook endpoint as-is — useful for tracking which camera, gate, or location triggered the detection.
+Attach metadata to any detection request. Parameters are forwarded to your webhook endpoint as-is - useful for tracking which camera, gate, or location triggered the detection.
 
 ```php
 $result = Anpr::detect($image, [
@@ -158,7 +159,7 @@ $result = Anpr::detect($image, [
 
 ## Webhooks
 
-Webhooks are configured in the [ANPR.Software dashboard](https://anpr.software). When a detection is made, the API forwards the result — along with any custom `params` you included in the request — to your configured webhook URL.
+Webhooks are configured in the [ANPR.Software dashboard](https://anpr.software). When a detection is made, the API forwards the result - along with any custom `params` you included in the request - to your configured webhook URL.
 
 This allows you to receive real-time detection results without polling. For example, passing `camera_id` or `gate_id` as params lets your webhook handler know exactly where the detection originated.
 
@@ -207,7 +208,7 @@ try {
 
 ## Testing
 
-The SDK ships with a test fake that follows Laravel's `Notification::fake()` pattern — no HTTP requests are made during tests.
+The SDK ships with a test fake that follows Laravel's `Notification::fake()` pattern - no HTTP requests are made during tests.
 
 ```php
 use Anpr\LaravelSdk\Facades\Anpr;
@@ -269,12 +270,12 @@ All options can be set via environment variables:
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `ANPR_API_KEY` | — | Your API key |
+| `ANPR_API_KEY` | - | Your API key |
 | `ANPR_BASE_URL` | `https://api.anpr.software` | API base URL |
 | `ANPR_TIMEOUT` | `30` | Request timeout in seconds |
 | `ANPR_RETRY_TIMES` | `3` | Number of retries on server errors |
 | `ANPR_RETRY_SLEEP_MS` | `200` | Delay between retries in ms |
-| `ANPR_WEBHOOK_SECRET` | — | HMAC secret for webhook verification |
+| `ANPR_WEBHOOK_SECRET` | - | HMAC secret for webhook verification |
 | `ANPR_WEBHOOK_PATH` | `/anpr/webhook` | Webhook endpoint path |
 
 ## API Methods
@@ -282,8 +283,8 @@ All options can be set via environment variables:
 | Method | Input | Returns | Description |
 |--------|-------|---------|-------------|
 | `Anpr::detect($image, $params)` | Full vehicle image | `DetectionResult` | Full pipeline: detect plates, classify, OCR |
-| `Anpr::usage($days)` | — | `UsageResult` | Usage stats and remaining credits |
-| `Anpr::health()` | — | `HealthResult` | API and model readiness status |
+| `Anpr::usage($days)` | - | `UsageResult` | Usage stats and remaining credits |
+| `Anpr::health()` | - | `HealthResult` | API and model readiness status |
 
 ## Image Input
 
