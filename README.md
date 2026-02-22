@@ -60,7 +60,7 @@ Per-character classification on cropped plates:
 ## Installation
 
 ```bash
-composer require anpr/laravel-sdk
+composer require ANPRSoftware/laravel-sdk
 ```
 
 Add your API key to `.env`:
