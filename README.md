@@ -23,7 +23,7 @@ Built for parking systems, gate access control, traffic monitoring, toll collect
 | Short Plate | Long Plate |
 |:-----------:|:----------:|
 | ![Short plate – R 68434](testimage_1.jpg) | ![Long plate – R 68434](testimage_2.jpg) |
-| Dubai · White · Private · Short | Dubai · White · Private · Long |
+| UAE · Dubai · White · Private · Short | UAE · Dubai · White · Private · Long |
 | **R 68434** | **R 68434** |
 
 ### Detection Pipeline
